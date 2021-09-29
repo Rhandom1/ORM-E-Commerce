@@ -16,3 +16,8 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+// const tagData = await Tag.findAll({
+//   include: [{ model: Product, as: "Product" }, { through: ProductTag }],
+// });
+// res.status(200).json(tagData);
